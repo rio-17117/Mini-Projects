@@ -7,13 +7,12 @@ async function fetchdata() {
         const data = await response.json();
         console.log(data)
 
-        // Check if the sprite property exists before accessing it
         if (data.sprites && data.sprites.front_default) {
             const sprite = data.sprites.front_default;
             const img = document.getElementById("sprite");
 
             img.src = sprite;
-            img.style.display = 'block'; // 'block' should be a string
+            img.style.display = 'block';
         } else {
             console.error("Sprite not found in the response");
         }
