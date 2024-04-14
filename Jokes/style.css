@@ -1,1 +1,57 @@
+  body {
+            background-image: linear-gradient(to right, rgba(69, 189, 252, 1) 58%, #00f2fe 100%);
+            background-size: cover;
+        }
 
+        .container {
+            z-index: -1;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* width: 55rem; */
+            max-width: 100%;
+            width: 42rem;
+            height: 10rem;
+            margin: auto;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 7rem;
+            background: rgb(58, 180, 156);
+            background: linear-gradient(240deg, rgba(58, 180, 156, 1) 0%, rgba(69, 189, 252, 1) 68%);
+            border-radius: 2rem;
+        }
+
+        #head {
+            color: white;
+            font-family: 'Fira Sans', sans-serif;
+            font-family: 'Rowdies', cursive;
+            font-family: 'Ubuntu', sans-serif;
+            position: relative;
+            bottom: 0.7rem;
+        }
+
+        #joke-container {
+            font-family: 'Fira Sans', sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
+            font-family: 'Rowdies', cursive;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 1000;
+        }
+
+        .btn {
+            padding: 1rem;
+            padding-top: 0.6rem;
+            border-radius: .8rem;
+            border: none;
+            background-color: springgreen;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: ease;
+        }
+
+        .btn:hover {
+            padding: 1.005rem;
+        }
