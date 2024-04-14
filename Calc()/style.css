@@ -1,0 +1,581 @@
+body {
+    margin: 0;
+    font-family: "Inconsolata", monospace;
+    background: 
+        linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%),
+        linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-repeat: no-repeat;
+    background-size: auto 100%; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    margin-top: 2vh;
+    color: white;
+    overflow: hidden;
+    overflow-y:scroll;
+}
+
+
+.container {
+    padding: 5vh;
+    padding-top: 1vh;
+    border-radius: 10px;
+    width: 90vw;
+    max-width: 550px; 
+    box-shadow:  rgba(255, 255, 255, 0.1);  
+    overflow: hidden;
+
+}
+
+.heading {
+    font-size: 4vh;
+}
+
+.output {
+    border: 2px solid #212121;
+    background-image: linear-gradient(to left, #212121 80%, black 100%);
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 2vh;
+    width: 100%;
+    font-size: 40px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+/* buttons start-: */
+
+.area {
+    border: 2px solid #485563;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    padding: 2vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-y: auto; 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    width: 100%; 
+    overflow: hidden;
+}
+
+.outerBtn button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 2vh;
+    cursor: pointer;
+}
+.outerBtn .numbers{
+    background-color: #212121;
+}
+
+.outerBtn {
+    background-color: #212121;
+    border-radius: 101px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease 4s; /* Added a 0.9s delay */
+}
+.outerBtn .numbers{
+    font-size: 20px;
+}
+
+.table td{
+    padding: 10px;
+}
+.table{
+    height: 60vh;
+}
+
+.outerBtn button:hover {
+    background-color: #444;
+    transform: scale(1);
+    font-size: 21px; /* Increase font size by 2 pixels */
+}
+
+.heading {
+    font-size: 4vh;
+    margin-top: 1px;
+}
+
+.output {
+    border: 2px solid #212121;
+    background-image: linear-gradient(to left, #212121 80%, black 100%);
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 2vh;
+}
+.output:hover{
+    background-image: linear-gradient(to left, #0e0e0e 80%, black 100%);
+}
+.numbers,
+.add,
+.sub,
+.mul,
+.div
+{
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.equal{
+    background-color: rgb(255, 170, 0);
+}
+.outerBtn .equal:hover{
+    background-color: rgb(178, 119, 1);
+}
+.reset{
+    background-color: rgb(255, 79, 79);
+}
+.outerBtn .reset:hover{
+    background-color: rgba(182, 0, 0, 0.781);
+}
+.del{
+    background-color: rgb(255, 88, 37);
+
+}
+.outerBtn .del:hover{
+    background-color: rgb(168, 68, 38);
+
+}
+.div,
+.add,
+.sub,
+.mul{
+    background-color:#161616 ;
+}
+
+.outerBtn .add:hover{
+    background-color: rgba(30, 30, 30, 0.746);
+}
+.outerBtn .sub:hover{
+    background-color: rgba(30, 30, 30, 0.746);
+}
+.outerBtn .mul:hover{
+    background-color: rgba(30, 30, 30, 0.746);
+}
+.outerBtn #divide:hover{
+    background-color: rgba(30, 30, 30, 0.746);
+}
+.outerBtn #point:hover{
+    background-color: rgba(30, 30, 30, 0.746);
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0.1vh;
+        width: 100vw;  
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0vh;
+        gap: 5px;
+        height: 65vh;
+        /* width:800px; */
+        /* display:block; */
+        
+    }
+    .output{
+        padding: 3vh;
+        font-size: 50px;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 12px;
+        margin: 5px;
+    }
+    .table{
+        height: 62vh;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media only screen and (max-width: 590px) {
+    .container {
+        padding: 0.1vh;
+        width: 100vw;  
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0vh;
+        gap: 5px;
+        height: 60vh;
+        margin: 0px;
+        
+    }
+    .output{
+        padding: 3vh;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 12px;
+        margin: 5px;
+    }
+    .table{
+        height: 60vh;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .numbers{
+        padding: 5px;
+        padding-left: 50px;
+        padding-right: 50px;;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .container {
+        /* padding: 0.1vh; */
+        width: 100vw;  
+        margin: 15px;
+        margin-bottom:0px ;
+        
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0.1vh;
+        gap: 5px;
+        height: 65vh;
+        margin: 0px;
+        
+    }
+    .output{
+        padding: 3vh;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 8px;
+        margin: 5px;
+    }
+    .table{
+        height: 60vh;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .numbers{
+        padding: 5px;
+        padding-left: 50px;
+        padding-right: 50px;;
+    }
+}
+@media only screen and (max-width: 529px) {
+    .container {
+        /* padding: 0.1vh; */
+        width: 100vw;  
+        margin: 19px;
+        margin-bottom:0px ;
+        
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0px;
+        gap: 500px;
+        height: 65vh;
+ 
+        padding: auto;
+    }
+    .output{
+        padding: 3vh;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 6px;
+        margin: 5px;
+    }
+    .table{
+        height: 70vh;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .numbers{
+        padding: 2px;
+        padding-left: 30px;
+        padding-right: 30px;;
+    }
+}
+@media only screen and (max-width: 519px) {
+    .container {
+        /* padding: 0.1vh; */
+        width: 100vw;  
+        margin: 15px;
+        margin-bottom:0px ;
+        
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0.1vh;
+        gap: 5px;
+        height: 65vh;
+        margin: 0px;
+        
+    }
+    .output{
+        padding: 3vh;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 8px;
+        margin: 5px;
+    }
+    .table{
+        height: 60vh;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .numbers{
+        padding: 5px;
+        padding-left: 50px;
+        padding-right: 50px;;
+    }
+}
+@media only screen and (max-width: 529px) {
+    .container {
+        /* padding: 0.1vh; */
+        width: 100vw;  
+        margin: 19px;
+        margin-bottom:0px ;
+        
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0px;
+        gap: 500px;
+        height: 65vh;
+        padding: auto;
+
+    }
+    .output{
+        padding: 3vh;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 6px;
+        margin: 5px;
+    }
+    .table{
+        height: 70vh;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .numbers{
+        padding: 2px;
+        padding-left: 30px;
+        padding-right: 30px;;
+    }
+    .reset button{
+        padding: 5px 25px;
+        font: 12px;
+        height: 10px;
+    }
+    .equal button{
+        padding: 5px 25px;
+        font: 12px;
+    }
+}
+@media only screen and (max-width: 394px) {
+    .container {
+        /* padding: 0.1vh; */
+        width: 100vw;  
+        margin: 19px;
+        margin-bottom:0px ;
+        
+    }
+    .heading {
+        padding: 0vh;
+        font-size: 6vh;
+    }
+    .area {
+        padding: 0px;
+        gap: 500px;
+        height: 65vh;
+        padding: auto;
+
+    }
+    .output{
+        margin-bottom: 2px;
+        padding: 3vh;
+        width: 92%;
+    }
+    .outerBtn button {
+        font-size: 20px;
+    }
+    .table td{
+        padding: 6px;
+        margin: 5px;
+    }
+    .table{
+        height: 70vh;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .del{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .add{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .sub{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .mul{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .numbers{
+        padding: 2px;
+        padding-left: 30px;
+        padding-right: 30px;;
+    }
+    .reset button{
+        padding: 5px 25px;
+        font: 12px;
+        height: 10px;
+    }
+    .equal button{
+        padding: 5px 25px;
+        font: 12px;
+    }
+}

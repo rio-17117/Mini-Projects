@@ -1,1 +1,153 @@
-as
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@106.5,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="heading">calc()</h2>
+        <!-- <div class="output" > -->
+            <input class="output" type="text" placeholder="Output will be shown here">
+        <!-- </div> -->
+        <div class="area">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('7')">7</button></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('8')">8</button></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('9')">9</button></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="del" onclick="del()">DEL</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('4')">4</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('5')">5</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('6')">6</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="add" onclick="add('+')"><span class="material-symbols-outlined">
+                                        add
+                                    </span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('1')">1</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('2')">2</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('3')">3</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="sub" onclick="sub('-')"><span class="material-symbols-outlined">
+                                        remove
+                                    </span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" id="point" onclick="decimalInp('.')">.</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="numbers" onclick="inp('0')">0</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="div" id="divide" onclick="div('/')">/</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="outerBtn">
+                                <button class="mul" onclick="mul('*')"> <span class="material-symbols-outlined">
+                                        close
+                                    </span></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="outerBtn">
+                                <button class="reset" onclick="reset(' ')">RESET</button>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div class="outerBtn">
+                                <button class="equal"  onclick="output()"><span class="material-symbols-outlined">
+                                    equal
+                                    </span></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="copyright">
+            <p class="right">
+                <hr>
+                Copyright © 2024 calc(), All rights reserved
+            </p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
