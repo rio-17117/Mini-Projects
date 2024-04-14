@@ -4,4 +4,4 @@ If you want to see the output of any of these mini projects, do the following st
 
 2) run the live server to see the output 
 
-Have a nice day/night/evening 😏
+Have a nice morning/afternoon/evening/night 😏
